@@ -2,7 +2,7 @@ import os
 import sys
 import json
 
-def create_sfx(settings, source_folder_path):
+def create_sfx(settings, source_folder_path, ignored=[]):
     executable_name = ''
     for file in os.listdir(source_folder_path):
         if file.endswith('.exe'):
@@ -55,4 +55,6 @@ if __name__=='__main__':
         print(f'\tusage: create_sfx.py <input source folder>')
         sys.exit(2)
 
-    create_sfx({}, source_folder_path)
+    ignored = []
+
+    create_sfx({}, source_folder_path, ignored)
