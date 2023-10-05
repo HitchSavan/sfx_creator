@@ -39,10 +39,11 @@ def create_sfx(settings, source_folder_path, ignored=[]):
     with open(f'config.txt', 'w') as f:
         f.write(config)
 
-    print(create_sfx_command)
 
+    print(create_archive_command)
     os.system(create_archive_command)
     print('---------------')
+    print(create_sfx_command)
     os.system(create_sfx_command)
 
     os.remove(f'{archive_name}.7z')
