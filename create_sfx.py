@@ -55,7 +55,10 @@ if __name__=='__main__':
         print(f'Not Enough Arguments:')
         print(f'\tusage: create_sfx.py <input source folder>')
         sys.exit(2)
+        
+    with open('settings.json', encoding='utf-8') as json_file:
+        settings = json.load(json_file)
 
     ignored = []
 
-    create_sfx({}, source_folder_path, ignored)
+    create_sfx(settings, source_folder_path, ignored)
