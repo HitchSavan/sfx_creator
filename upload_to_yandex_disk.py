@@ -30,7 +30,7 @@ def upload_to_disk(settings, source_path='', target_path='', ignored=[]):
     if not target_path:
         target_path = settings['default_folder']
 
-    td = date.today().strftime("%d_%m_%Y")
+    td = date.today().strftime("%Y_%m_%d")
 
     total_path = '/'
     for folder in target_path.split('/'):
