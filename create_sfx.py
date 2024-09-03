@@ -15,11 +15,10 @@ def create_sfx(settings, source_folder_path, ignored=[]):
     if settings:
         for item in settings["include_files"]:
             create_archive_command += f' {source_folder_path}{item}'
-        if os.path.exists(f'{source_folder_path}\\windeployqt'):
-            create_archive_command += f' {source_folder_path}\\windeployqt\\*'
         else:
-            for item in settings["additional_files"]:
-                create_archive_command += f' {source_folder_path}{item}'
+            if "additional_files" in settings.keys():
+                for item in settings["additional_files"]:
+                    create_archive_command += f' {source_folder_path}{item}'
     else:
         create_archive_command += f' {source_folder_path}\\*'
 

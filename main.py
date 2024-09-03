@@ -2,10 +2,11 @@ from create_sfx import create_sfx
 from upload_to_yandex_disk import upload_to_disk
 import json
 import sys
+import os
 
 if __name__ == '__main__':
 
-    with open('settings.json', encoding='utf-8') as json_file:
+    with open(os.path.join(os.path.dirname(sys.argv[0]), 'settings.json'), encoding='utf-8') as json_file:
         settings = json.load(json_file)
     
     try:

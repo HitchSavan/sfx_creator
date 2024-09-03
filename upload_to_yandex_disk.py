@@ -4,7 +4,6 @@ import json
 import sys
 from datetime import date
 
-
 def create_dir(y, path):
     try:
         y.mkdir(path)
