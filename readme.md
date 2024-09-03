@@ -1,7 +1,7 @@
 
 Tool for SFX packing and automatic uploading to yandex disk.
 
-# Settings JSON example:
+### Settings JSON example
 
 {
     "token": "", // yandex disk token
