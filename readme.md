@@ -1,7 +1,8 @@
+# SFX packer
 
 Tool for SFX packing and automatic uploading to yandex disk.
 
-### Settings JSON example
+## Settings JSON example
 
     {
         "token": "", // yandex disk token
@@ -13,5 +14,6 @@ Tool for SFX packing and automatic uploading to yandex disk.
         "additional_files": [ // files to upload
             "\\file.img",
             "\\folder"
-        ]
+        ],
+        "use_executable_name": true // if *.exe file is found in src folder, use its filename as SFX name, othervise src folder name will be used
     }

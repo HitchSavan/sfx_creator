@@ -4,9 +4,10 @@ import json
 
 def create_sfx(settings, source_folder_path, ignored=[]):
     executable_name = ''
-    for file in os.listdir(source_folder_path):
-        if file.endswith('.exe'):
-            executable_name = file
+    if (settings["use_executable_name"]):
+        for file in os.listdir(source_folder_path):
+            if file.endswith('.exe'):
+                executable_name = file
 
     archive_name = os.path.split(source_folder_path)[-1]
 
